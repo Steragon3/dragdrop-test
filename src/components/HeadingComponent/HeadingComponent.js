@@ -7,7 +7,7 @@ const HeadingComponent = ({item, index}) => {
   return (
     <Draggable draggableId={item.id} index={index}>
     {(provided, snapshot) => (
-      <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="task_box heading">
+      <div ref={provided.innerRef} {...provided.draggableProps} {...provided.dragHandleProps} className="task_box heading" id={`comp${item.id}`}>
         {item.value}
       </div>
       )

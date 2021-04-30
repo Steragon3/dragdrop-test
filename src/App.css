@@ -57,7 +57,12 @@
   background-color: orange;
 }
 
+
 .text {
   margin-left: 10vw;
   background-color: cyan;
+}
+
+.dragging{
+  background-color: green;
 }

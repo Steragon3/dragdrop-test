@@ -10,6 +10,7 @@ const DiaryEditor = () => {
 
   let onDragEnd = (result) => {
     console.log(result)
+    document.getElementById(`comp${result.draggableId}`).classList.remove('dragging')
     if(!result.destination) return;
     const tempitems = Array.from(items)
     const [reorderedItem] = tempitems.splice(result.source.index,1)
@@ -18,11 +19,17 @@ const DiaryEditor = () => {
     setItems(tempitems)
   }
 
+  let onDragStart = (result) => {
+    console.log(result)
+    document.getElementById(`comp${result.draggableId}`).classList.add('dragging')
+  }
   return (
     <div>
       DiaryEditor Component
       <DragDropContext
-          onDragEnd={onDragEnd}>
+          onDragEnd={onDragEnd}
+          onDragStart={onDragStart}>
+
           <Droppable
             droppableId="tasks">
               {(provided, snapshot) => (
