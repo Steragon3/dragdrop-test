@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.itemList{
+  width: 80vw;
+  display:flex;
+  flex-direction: column;
+  
+}
+
+.task_box{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid grey;
+  text-align: left;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.heading{
+  background-color: orange;
+}
+
+.text {
+  margin-left: 10vw;
+  background-color: cyan;
+}
